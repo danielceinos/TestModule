@@ -1,13 +1,14 @@
 package com.fireshield.tmodule
 
-import io.reactivex.Single
+import com.fireshield.dependencylibrary.TDClass
 
 /**
  * Created by Daniel S on 10/07/2018.
  */
-class TClass{
+class TClass {
 
-  fun obObservable() : Single<String> {
-      return Single.just("holi")
+  fun execute(): String {
+    val tdClass = TDClass()
+    return tdClass.printVersion()
   }
 }
