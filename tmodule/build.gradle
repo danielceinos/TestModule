@@ -3,11 +3,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.danielceinos'
+
+
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
-        google()
         maven { url "https://jitpack.io" }
     }
 
@@ -16,11 +17,9 @@ buildscript {
     }
 }
 
+
 android {
     compileSdkVersion 27
-
-
-
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 27
@@ -49,7 +48,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-     compileOnly 'io.reactivex.rxjava2:rxandroid:2.0.2'
+     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 }
 repositories {
     mavenCentral()
